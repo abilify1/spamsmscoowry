@@ -29,7 +29,7 @@ hd = {
 }
 if os.name == 'nt':os.system('cls')
 else:os.system('clear')
-print ("""\n ██████╗ ██████╗  ██████╗ ██╗    ██╗██████╗ ██╗   ██╗
+print ("""\n\x1b[1;96m██████╗ ██████╗  ██████╗ ██╗    ██╗██████╗ ██╗   ██╗
 ██╔════╝██╔═══██╗██╔═══██╗██║    ██║██╔══██╗╚██╗ ██╔╝
 ██║     ██║   ██║██║   ██║██║ █╗ ██║██████╔╝ ╚████╔╝ 
 ██║     ██║   ██║██║   ██║██║███╗██║██╔══██╗  ╚██╔╝  
@@ -52,7 +52,7 @@ try:
                 b = r.post(spam,headers=hd,cookies={'_cwpeople_keyle_key':a["_cwpeople_key"]},data=jsn).text
                 c = json.loads(b)["type"]
                 if c == 'ok':
-                        print("[√] >>> Sukses <<< Mengirim pesan ke >> "+no)
+                        print("\x1b[1;92m[√] >>> Sukses <<< Mengirim pesan ke >> "+no)
                         tunggu(30)
                 else:
                         print("[!] Upss limit, ulangi lagi nanti")
